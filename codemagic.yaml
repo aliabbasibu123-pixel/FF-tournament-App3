@@ -1,0 +1,17 @@
+
+workflows:
+  android-release:
+    name: Build FF Tournament APK
+    environment:
+      flutter: stable
+      android_signing:
+        - keystore: FF_KEYSTORE
+    scripts:
+      - name: Get dependencies
+        script: |
+          flutter pub get
+      - name: Build release APK
+        script: |
+          flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk

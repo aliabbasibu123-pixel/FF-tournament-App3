@@ -1,0 +1,15 @@
+
+name: ff_tournament_app
+description: A Free Fire tournament app for Codemagic mobile build.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
